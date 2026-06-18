@@ -150,7 +150,7 @@ router.get(
         );
 
         res.redirect(
-            `http://localhost:5173/google-success?token=${token}`
+            `https://cv-strore.onrender.com/google-success?token=${token}`
         );
     }
 );
