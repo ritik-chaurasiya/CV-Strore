@@ -3,7 +3,7 @@ import axios from "axios";
 export const uploadProfilePhoto = async (id, formData) => {
 
     return await axios.put(
-        `http://localhost:5000/api/users/profile-photo/${id}`,
+        `https://cv-strore.onrender.com/api/users/profile-photo/${id}`,
         formData,
         {
             headers: {
@@ -19,7 +19,7 @@ export const updateProfile = async (
 ) => {
 
     return await axios.put(
-        `http://localhost:5000/api/users/profile/${id}`,
+        `https://cv-strore.onrender.com/api/users/profile/${id}`,
         userData
     );
 
@@ -29,7 +29,7 @@ export const getUsers =
     async () => {
 
         return await axios.get(
-            "http://localhost:5000/api/users"
+            "https://cv-strore.onrender.com/api/users"
         );
 
     };
@@ -38,7 +38,7 @@ export const deleteUser =
     async (id) => {
 
         return await axios.delete(
-            `http://localhost:5000/api/users/${id}`
+            `https://cv-strore.onrender.com/api/users/${id}`
         );
 
     };

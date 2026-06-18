@@ -4,7 +4,7 @@ export const createOrder =
   async (orderData) => {
 
     return await axios.post(
-      "http://localhost:5000/api/orders/create",
+      "https://cv-strore.onrender.com/api/orders/create",
       orderData
     );
 
@@ -12,13 +12,13 @@ export const createOrder =
 
 export const getOrders = async () => {
   return await axios.get(
-    "http://localhost:5000/api/orders"
+    "https://cv-strore.onrender.com/api/orders"
   );
 };    
 
 export const cancelOrder = async (id) => {
   return await axios.put(
-    `http://localhost:5000/api/orders/cancel/${id}`
+    `https://cv-strore.onrender.com/api/orders/cancel/${id}`
   );
 };
 
@@ -29,7 +29,7 @@ export const updateOrderStatus =
   ) => {
 
     return await axios.put(
-      `http://localhost:5000/api/orders/${id}/status`,
+      `https://cv-strore.onrender.com/api/orders/${id}/status`,
       {
         orderStatus:
           status,
@@ -42,7 +42,7 @@ export const getRevenue =
     async () => {
 
         return await axios.get(
-            "http://localhost:5000/api/orders/revenue"
+            "https://cv-strore.onrender.com/api/orders/revenue"
         );
 
     };  

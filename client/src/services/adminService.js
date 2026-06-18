@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/admin";
+const API_URL = "https://cv-strore.onrender.com/api/admin";
 
 export const adminSignup = (data) => {
   return axios.post(`${API_URL}/signup`, data);
@@ -18,7 +18,7 @@ export const getDashboardStats =
     async () => {
 
         return await axios.get(
-            "http://localhost:5000/api/admin/dashboard-stats"
+            "https://cv-strore.onrender.com/api/admin/dashboard-stats"
         );
 
   };
@@ -27,7 +27,7 @@ export const getMonthlyRevenue =
     async () => {
 
         return await axios.get(
-            "http://localhost:5000/api/admin/monthly-revenue"
+            "https://cv-strore.onrender.com/api/admin/monthly-revenue"
         );
 
     };  

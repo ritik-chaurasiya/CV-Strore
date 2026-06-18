@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/products";
+const API_URL = "https://cv-strore.onrender.com/api/products";
 
 // Get All Products
 export const getProducts = async (
@@ -10,7 +10,7 @@ export const getProducts = async (
 ) => {
 
     return await axios.get(
-        `http://localhost:5000/api/products?keyword=${keyword}&category=${category}&page=${page}`
+        `https://cv-strore.onrender.com/api/products?keyword=${keyword}&category=${category}&page=${page}`
     );
 
 };

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/api/auth";
+const API = "https://cv-strore.onrender.com/api/auth";
 
 export const signupUser = (data) =>
   axios.post(`${API}/signup`, data);
