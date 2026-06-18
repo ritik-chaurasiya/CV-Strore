@@ -150,7 +150,7 @@ router.get(
         );
 
         res.redirect(
-            `https://cv-strore.onrender.com/google-success?token=${token}`
+            `https://cv-strore.vercel.app/google-success?token=${token}`
         );
     }
 );
