@@ -152,6 +152,9 @@ router.get(
         res.redirect(
             `https://cv-strore.vercel.app/google-success?token=${token}`
         );
+        // res.redirect(
+        //     `http://localhost:5173/google-success?token=${token}`
+        // );
     }
 );
 
