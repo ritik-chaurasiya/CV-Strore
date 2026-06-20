@@ -133,7 +133,7 @@ function FeaturedProducts({ category }) {
     };
 
     return (
-        <section className="py-5 bg-light">
+        <section className="py-4 bg-light">
 
             <div className="container">
 
@@ -162,94 +162,108 @@ function FeaturedProducts({ category }) {
                 <div className="row g-4">
 
                     {filteredProducts
-                        .slice(0, 8)
+                        .slice(0, 60)
                         .map((product) => (
+
+                           
 
                             <div
                                 key={product._id}
-                                className="col-6 col-md-4 col-lg-3"
+                                className="col-4 col-md-3 col-lg-2 "
                             >
 
-                                <div className="card h-100 border-0 shadow-sm">
+                                <div className="card h-100 shadow-sm border-0">
 
-                                    <img
-                                        src={product.image}
-                                        alt={product.name}
-                                        className="card-img-top p-3"
+                                    {/* Product Image */}
+                                    <div
+                                        className="bg-white d-flex justify-content-center align-items-center p-2"
                                         style={{
-                                            height: "220px",
-                                            objectFit: "contain",
+                                            height: "120px",
                                         }}
-                                    />
-
-                                    <div className="card-body d-flex flex-column">
-
-                                        <h6
-                                            className="fw-semibold"
+                                    >
+                                        <img
+                                            src={product.image}
+                                            alt={product.name}
+                                            className="img-fluid"
                                             style={{
-                                                minHeight: "48px",
+                                                maxHeight: "110px",
+                                                objectFit: "contain",
+                                            }}
+                                        />
+                                    </div>
+
+                                    <div className="card-body p-2 d-flex flex-column">
+
+                                        {/* Product Name */}
+                                        <h6
+                                            className="fw-semibold m-1"
+                                            style={{
+                                                minHeight: "25px",
+                                                fontSize: "12px",
                                             }}
                                         >
                                             {product.name}
                                         </h6>
 
-                                        <p className="text-muted small mb-2">
-                                            {product.category}
-                                        </p>
+                                        {/* Price */}
+                                        <div className="mb-1">
 
-                                        <h5
-                                            className="fw-bold mb-3"
-                                            style={{
-                                                color: "#210944",
-                                            }}
-                                        >
-                                            ₹{product.price}
-                                        </h5>
+                                            <span
+                                                className="fw-bold"
+                                                style={{
+                                                    fontSize: "14px",
+                                                    color: "#210944",
+                                                }}
+                                            >
+                                                ₹{product.price}
+                                            </span>
 
-                                        <p className="mb-3">
+
+
+                                        </div>
+
+                                        {/* Stock */}
+                                        <p className="mb-0">
                                             {product.stock > 0 ? (
-                                                <span className="badge bg-success">
+                                                <span className="badge bg-success small">
                                                     In Stock ({product.stock})
                                                 </span>
                                             ) : (
-                                                <span className="badge bg-danger">
+                                                <span className="badge bg-danger small">
                                                     Out Of Stock
                                                 </span>
                                             )}
                                         </p>
 
+                                        <button
+                                            className="btn btn-sm w-100 mb-1"
+                                            onClick={() => addToWishlist(product)}
+                                        >
+                                            ❤️
+                                        </button>
+
+                                        {/* Buttons */}
                                         <div className="mt-auto">
 
                                             {product.stock > 0 ? (
                                                 <button
-                                                    className="btn btn-warning w-100 mb-2 fw-semibold"
+                                                    className="btn btn-warning btn-sm w-100 mb-1"
                                                     onClick={() => addToCart(product)}
                                                 >
                                                     Add To Cart
                                                 </button>
                                             ) : (
                                                 <button
-                                                    className="btn btn-danger w-100 mb-2 fw-semibold"
+                                                    className="btn btn-danger btn-sm w-100 mb-1"
                                                     disabled
                                                 >
                                                     Out Of Stock
                                                 </button>
                                             )}
 
-                                            <button
-                                                className="btn btn-outline-danger w-100 mb-2"
-                                                onClick={() => addToWishlist(product)}
-                                            >
-                                                ❤️ Add To Wishlist
-                                            </button>
-
                                             <Link
                                                 to={`/product/${product._id}`}
-                                                className="btn w-100 text-white"
-                                                style={{
-                                                    background:
-                                                        "linear-gradient(135deg,#210944,#08264c)",
-                                                }}
+                                                className="btn btn-outline-primary btn-sm w-100"
                                             >
                                                 View Details
                                             </Link>

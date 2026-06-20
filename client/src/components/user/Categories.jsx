@@ -135,10 +135,10 @@ function Categories({
     };
 
     return (
-        <section className="bg-white shadow-sm py-3">
+        <section className="bg-white shadow-sm py-4">
             <div className="container-fluid">
 
-                <div className="text-center my-3">
+                {/* <div className="text-center my-3">
                     <h2
                         className="fw-bold"
                         style={{
@@ -147,7 +147,7 @@ function Categories({
                     >
                         Shop By Category
                     </h2>
-                </div>
+                </div> */}
 
                 <div
                     className="d-flex justify-content-lg-center gap-4 overflow-auto px-2"
