@@ -125,7 +125,7 @@ function Login() {
                     type="button"
                     onClick={() =>
                         window.location.href =
-                        "http://localhost:5000/api/auth/google"
+                        "https://cv-strore.onrender/api/auth/google"
                     }
                     className="btn btn-light border w-100 d-flex align-items-center justify-content-center gap-2 py-2"
                 >
