@@ -23,7 +23,7 @@ function GoogleSuccess() {
             );
 
             fetch(
-                "https://cv-strore.onrender/api/users/me",
+                "https://cv-strore.onrender.com/api/users/me",
                 {
                     headers: {
                         Authorization:
